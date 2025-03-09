@@ -1,4 +1,6 @@
 {
+  "name": "scrumble",
+  "homepage": "https://o2rynn.github.io/scrumble",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d ."
