@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrumble</title>
+    <script src="./index.js" defer></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        background-color: #ddd;
+        width: 500px; /* 원하는 크기로 설정 */
+        min-height: 200px; /* 원하는 크기로 설정 */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        opacity: 30%;
+      }
+      header > h1 {
+        padding: 15px 10px;
+        margin-bottom: 20px;
+      }
+      main {
+        background-color: #f1eded;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+      textarea {
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: none; /* 크기 조절 방지 */
+      }
+      button {
+        margin-left: 10px; /* 텍스트 영역과 간격 추가 */
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: #ddd;
+
+        align-self: flex-end;
+      }
+      #outputText {
+        border-radius: 5px;
+        width: 100%;
+        min-height: 300px;
+        padding: 10px;
+        background-color: antiquewhite;
+      }
+      #inputBox {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Scrumble</h1>
+      </header>
+      <main id="inputBox">
+        <div style="margin-bottom: 10px">
+          <textarea id="inputText"> </textarea>
+        </div>
+        <button id="convertBtn">Covert</button>
+      </main>
+
+      <div>
+        <div id="outputText"></div>
+      </div>
+    </div>
+  </body>
+</html>
