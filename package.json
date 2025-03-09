@@ -2,7 +2,7 @@
   "name": "scrumble",
   "homepage": "https://o2rynn.github.io/scrumble",
   "scripts": {
-    "predeploy": "rmdir /s /q dist && mkdir dist && xcopy index.html dist /Y && xcopy index.js dist /Y",
+    "predeploy": "if exist dist rmdir /s /q dist && mkdir dist && xcopy index.html dist /Y && xcopy index.js dist /Y",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
