@@ -2,7 +2,7 @@
   "name": "scrumble",
   "homepage": "https://o2rynn.github.io/scrumble",
   "scripts": {
-    "predeploy": "if exist dist rmdir /s /q dist && mkdir dist && xcopy index.html dist /Y && xcopy index.js dist /Y",
+    "predeploy": "powershell -Command \"if (Test-Path dist) { Remove-Item dist -Recurse -Force }; New-Item -ItemType Directory -Path dist; Copy-Item index.html dist; Copy-Item index.js dist\"",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
